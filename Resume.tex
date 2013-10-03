@@ -1,0 +1,243 @@
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+\usepackage{graphicx}
+
+
+\newcommand{\Csharp}{%
+  {\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}}}
+  
+  
+  
+\newcommand{\cvdoublecolumn}[2]{%
+  \cvline{}{%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+    }%
+}
+
+% usage: \cvreference{name}{address line 1}{address line 2}{address line 3}{address line 4}{e-mail address}{phone number}
+% Everything but the name is optional
+% If \addresssymbol, \emailsymbol or \phonesymbol are specified, they will be used.
+% (Per default, \addresssymbol isn't specified, the other two are specified.)
+% If you don't like the symbols, remove them from the following code, including the tilde ~ (space).
+
+\newcommand{\cvreference}[7]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
+
+    
+    
+\usepackage{fontawesome}
+% \usepackage{hyperref}
+
+
+
+
+% \usepackage{hyperref}
+\AfterPreamble{\hypersetup{
+  pdfauthor={Kapil Koju},
+  pdftitle={CV of Kapil Koju},
+  pdfsubject={CV of Kapil Koju},
+  urlcolor=blue,
+}}
+
+% \ifxetex
+%   \usepackage{letltxmacro}
+%   \setlength{\XeTeXLinkMargin}{1pt}
+%   \LetLtxMacro\SavedIncludeGraphics\includegraphics
+%   \def\includegraphics#1#{% #1 catches optional stuff (star/opt. arg.)
+%     \IncludeGraphicsAux{#1}%
+%   }%
+%   \newcommand*{\IncludeGraphicsAux}[2]{%
+%     \XeTeXLinkBox{%
+%       \SavedIncludeGraphics#1{#2}%
+%     }%
+%   }%
+% \fi
+
+\usepackage{nth}
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+
+
+
+
+% personal data
+\name{Kapil}{Koju}
+\title{Java Developer}                               % optional, remove / comment the line if not wanted
+% \address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{Omitted for web}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{Omitted for web}                    % optional, remove / comment the line if not wanted
+% \phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{kplx2.0@gmail.com}                               % optional, remove / comment the line if not wanted
+% \homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+%  \extrainfo{\href{http://stackexchange.com/users/1170155/thekojueffect?tab=accounts}{\includegraphics[height=11pt]{stackexchange.png}} } % optional, remove / comment the line if not wanted
+ 
+\extrainfo{
+\href{https://github.com/TheKojuEffect}{{\faGithub}}
+\href{https://twitter.com/TheKojuEffect}{\faTwitter}
+@TheKojuEffect}
+
+% \href{http://stackexchange.com/users/1170155/thekojueffect?tab=accounts}{\includegraphics[height=11pt]{stackexchange.png}}
+\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \quote{To become Java Developer}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2010--2013}{BE Computer}{Kantipur Engineering College}{Lalitpur}{}{}
+\cvline{affiliation}{Tribhuvan University}
+\cvline{score}{78.24\% in average (waiting result of \nth{8} semester)}
+\cvline{scholarships}{Semester wise merit based scholarhip in all semesters}
+\cvline{electives}{\begin{itemize}
+		    \item Data Mining
+                    \item Big Data Technologies
+                    \item Enterprise Application Design and Development
+                   \end{itemize}}
+
+\cventry{2007--2009}{+2 (Maths)}{Khwopa Higher Secondary School}{Bhaktapur}{}{}
+\cvline{affiliation}{Higher Secondary Education Board}
+\cvline{score}{73.8\%}
+\cvline{scholarships}{one year full scholarship}
+\cvline{}{}
+
+\cventry{2007}{SLC}{Basu Higher Secondary School}{Bhaktapur}{}{}
+\cvline{affiliation}{Government of Nepal}
+\cvline{score}{84.5\%}
+\bigskip{}
+
+\section{Technical Skills}
+\subsection{Proficient With}
+\cvline{languages}{Java, C, C++, PHP, HTML, CSS}
+\cvline{databases}{MySQL, Oracle Database}
+\cvline{frameworks}{Spring, Spring-data-JPA, Hibernate, JPA, JUnit, Mokito}
+\cvline{tools}{Git, Eclipse, Maven, Mylyn, Vim, UML, Design Patterns}
+\cvline{OS platform}{Linux - Ubuntu (preferred), Windows}
+
+\subsection{Have Knowledge Of}
+\cvline{languages}{Scala (currently focusing), Groovy, Python, \Csharp{}, \LaTeX{}}
+\cvline{databases}{NoSQL, Hadoop, MariaDB}
+\cvline{frameworks}{Griffon}
+\cvline{tools}{Gerrit, Jenkins-CI, NetBeans, IntelliJ IDEA}
+
+\section{Project Experiences}
+\subsection{Major Project}
+\cvitem{title}{\emph{OpERP}}
+\cvitem{supervisor}{Prof. Dr. Subarna Shakya}
+\cvitem{description}{Enterprise Resource Planning for Distribution Companies}
+\cvitem{technologies}{Java, Spring, MySQL, Spring-data-JPA, Spring-remoting, JPA}
+\cvitem{site}{\url{http://devopsdistilled.github.io/OpERP/}}
+
+\subsection{Minor Project}
+\cvitem{title}{\emph{AutoPOS}}
+\cvitem{description}{Point of Sale application for automobile parts shop}
+\cvitem{technologies}{Java, MySQL}
+
+\subsection{Database Project}
+\cvitem{title}{\emph{Insite Search}}
+\cvitem{description}{Search Engine to search content within a website}
+\cvitem{technologies}{PHP, MySQL}
+
+\subsection{Computer Graphics Project}
+\cvitem{title}{\emph{CycleBuddy}}
+\cvitem{description}{Simple graphical representation of bicycle}
+\cvitem{technologies}{C, graphics.h}
+\cvitem{site}{\url{https://github.com/TheKojuEffect/CycleBuddy}}
+
+
+\cvline{}{}
+\section{Activities}
+\subsection{Trainings}
+\cventry{Nov 2011}{Phone Factory}{Microsoft Innovation Center}{Kathmandu}{}{Windows Phone Application Development Training}
+\cventry{Jan 2011}{Basic Troubleshooting}{Softtech Foundation Pvt. Ltd.}{Kathmandu}{}{Professional Level Troubleshooting Training}
+\cventry{Dec 2009}{Graphics and Office Package}{Yew IT Solution}{Bhaktapur}{}{Microsoft Office and Graphics Desining}
+
+\subsection{Involvements}
+\cventry{2011--2012}{Microsoft Student Partner 2012}{Microsoft Innovation Center}{Kathmandu}{}{MSP 2012 for Kantipur Engineering College}
+\cventry{Nov 2011}{\nth{5} ICT for Development and Education}{SM Foundation Nepal}{Kathmandu}{}{Involved as a blogger for the event}
+\cventry{}{Technical Quizzes}{}{}{}{Attended few quizzes representing KEC}
+
+\section{Interests}
+\cvitem{}{
+  \begin{itemize}
+   \item Reading technical articles, blogs and books
+   \item Trying out new technologies
+   \item Music
+  \end{itemize}
+}
+
+\section{Online Presence}
+\cvline{twitter}{\url{https://twitter.com/TheKojuEffect}}
+\cvline{github}{\url{https://github.com/TheKojuEffect}}
+\cvline{stackexchange}{\url{http://stackexchange.com/users/1170155/thekojueffect?tab=accounts}}
+
+\cvline{}{}
+\section{Personal Details}
+\cvline{name}{Kapil Koju}
+\cvline{date of birth}{Omitted for web}
+\cvline{address}{Byasi-10, Bhaktapur}
+\cvline{phone}{Omitted for web}
+\cvline{email}{\href{mailto:kplx2.0@gmail.com}{kplx@2.0@gmail.com}}
+% \cvline{nationality}{Nepalese}
+\cvline{languages}{English, Nepali, Newari, Hindi}
+% \cvline{marital status}{unmarried}
+
+\cvline{}{}
+\section{References}
+\cvdoublecolumn{\cvreference{Prof.~Dr.~Subarna Shakya}
+    {Professor (Asst.~Dean)}
+    {Department of Electronics and\newline{}Computer Engineering}
+    {IOE, Pulchowk Campus}
+    {Pulchowk, Lalitpur}
+    {Omitted for web}
+    {Omitted for web}%
+    }
+    {\cvreference{Er.~Rabindra Khati}
+    {HOD, Junior Associate Professor}
+    {Department of Computer and\newline{}Electronics Engineering}
+    {Kantipur Engineering College}
+    {Dhapakhel, Lalitpur}
+    {Omitted for web}
+    {Omitted for web}%
+    }
+
+
+    
+                               % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
